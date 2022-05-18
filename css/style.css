@@ -477,12 +477,13 @@ body::after {
 .movie-link {
   display: flex;
   text-decoration: none;
+  flex-direction: column;
 }
 .movie-thumb {
-  flex-basis: 40%;
+  flex-basis: 100%;
   flex-shrink: 0;
-  margin-right: 5%;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .movie-link .movie-thumb img {
   transition: .4s;
@@ -502,6 +503,16 @@ body::after {
 .movie-info {
   font-size: .825rem;
   line-height: 1.8;
+}
+
+@media screen and (min-width:768px) {
+  .movie-link {
+    flex-direction: row;
+  }
+  .movie-thumb {
+    flex-basis: 40%;
+    margin-right: 5%;
+  }
 }
 
 /* TV */
@@ -652,7 +663,7 @@ body::after {
 
 @media screen and (min-width: 768px) {
   .contact-btn {
-    --btn-size: 24vmin;
+    --btn-size: 31vmin;
   }
 }
 
